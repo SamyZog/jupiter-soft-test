@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply scrollbar overflow-x-hidden min-h-screen;
+  }
+
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-0.5 h-0.5;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-red-400;
+  }
+}
